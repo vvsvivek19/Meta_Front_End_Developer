@@ -17,9 +17,11 @@
 .item{
     background-color: #ff0037;
     color: #fff;
+    text-align: center;
     font-size: 35px;
     padding: 20px;
     margin: 10px;
+    flex: 1;
 }
 
 /* .items-3 {
@@ -30,7 +32,7 @@
     align-self:stretch;
 } */
 
-.items-1 {
+/* .items-1 {
     order: 3;
 }
 
@@ -48,4 +50,13 @@
 
 .items-5 {
     order: 2;
-}
+} */
+
+/* .items-4 {
+    flex-grow: 5;
+} */
+
+.items-5 {
+    flex-basis: 700px;
+    flex-shrink: 0;
+} 
