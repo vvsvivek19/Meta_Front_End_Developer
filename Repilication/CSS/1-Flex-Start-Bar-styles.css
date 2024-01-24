@@ -1,0 +1,39 @@
+.container {
+    display: inline-flex;
+    flex: 1 1 300px;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.items {
+    flex: 1;
+}
+
+.icon {
+    padding: .8rem;
+}
+
+.searchBox {
+    margin: 0.5rem;
+    align-self: stretch;
+    padding: 0.8rem;
+    flex: 1;
+    border: 0;
+}
+
+.searchButton {
+    background: rgb(32, 32, 228);
+    color: wheat;
+    border-radius: 5px;
+    border: 0;
+    align-self: stretch;
+    padding: 0.8rem;
+}
+
+/* .items {
+    flex-grow: 1;
+} */
+
