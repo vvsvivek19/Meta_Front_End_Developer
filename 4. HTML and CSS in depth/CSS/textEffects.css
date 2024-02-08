@@ -1,0 +1,37 @@
+.glow {
+    color: rgb(237, 237, 151);
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 31px #fff,
+        0 0 55px rgb(255, 226, 4),
+        0 0 91px rgb(255, 226, 4),
+        0 0 100px rgb(255, 226, 4),
+        0 0 122px rgb(255, 226, 4),
+        0 0 140px rgb(255, 226, 4);
+
+}
+
+h1, h3 {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+body {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Papyrus';
+    background-color: black;
+}
+
+h1 {
+    transform: rotate(0deg);
+}
+
+h1:hover{
+    transform: rotate(20deg);
+}
+
+h1 {
+    transition: transform 2s;
+}
