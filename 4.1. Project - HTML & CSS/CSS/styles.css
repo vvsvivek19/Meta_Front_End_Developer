@@ -44,11 +44,109 @@ table {
 	border-spacing: 0;
 }
 
-/*Main CSS Rules*/
+/*Rules for Header*/
 
+header{
+    background-color: #57cde2;
+}
 .logo{
-    width: 320px;
-    height: 240px;
+    width: 50%;
+    height: 10%;
     margin-left: auto;
     margin-right: auto;
+    display: block;
+    padding: 5px;
+}
+
+
+
+/*Rules for Navigation*/
+
+li {
+    display: inline;
+    flex-grow: 1;
+}
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: #d6705e;
+}
+
+.navigation li {
+    display: inline-block;
+    padding: 25px;
+    margin: 0 25px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: black;
+}
+
+.navigation li:hover {
+    background-color: lightcyan;
+    color: black;
+    border-radius: 2px;
+    transition: background-color 0.5s ease;
+}
+
+/*Rules for Main Content*/
+.main-content {
+    display: grid;
+    max-width: 100%;
+    height: 70vh;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "Promotion Promotion Promotion"
+                          "siteInfo1 siteInfo2 siteInfo3";
+}
+
+.Promotion {
+    grid-area: Promotion;
+    border: 2px solid black;
+    background-color: azure;
+}
+.siteInfo1 {
+    grid-area: siteInfo1;
+    background-color: rgb(231, 155, 155);
+    border: 2px solid black;
+}
+.siteInfo2 {
+    grid-area: siteInfo2;
+    background-color: rgb(154, 154, 240);
+    border: 2px solid black;
+}
+.siteInfo3 {
+    grid-area: siteInfo3;
+    background-color: rgb(163, 247, 163);
+    border: 2px solid black;
+}
+
+/*Rules for Main Content*/
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.footerItem {
+    font-weight: bold;
+    padding: 25px;
+    text-align: center;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    border:2px solid black;
+}
+
+.footerLogo{
+    flex-grow: 1;
+}
+
+.ContactInfo {
+    flex-grow: 1;
 }
