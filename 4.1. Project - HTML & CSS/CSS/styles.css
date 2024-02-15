@@ -44,10 +44,18 @@ table {
 	border-spacing: 0;
 }
 
-/*Rules for Header*/
+/*================================================================================================*/
+/*Rules for body*/
+/*================================================================================================*/
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
 
+/*================================================================================================*/
+/*Rules for Header*/
+/*================================================================================================*/
 header{
-    background-color: #57cde2;
+    background-color: rgba(206,160,0,255);
 }
 .logo{
     width: 50%;
@@ -59,21 +67,19 @@ header{
 }
 
 
-
+/*================================================================================================*/
 /*Rules for Navigation*/
-
+/*================================================================================================*/
 li {
     display: inline;
     flex-grow: 1;
 }
-
 .navigation {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     background-color: #d6705e;
 }
-
 .navigation li {
     display: inline-block;
     padding: 25px;
@@ -82,12 +88,10 @@ li {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
-
 .navigation a {
     text-decoration: none;
     color: black;
 }
-
 .navigation li:hover {
     background-color: lightcyan;
     color: black;
@@ -95,39 +99,160 @@ li {
     transition: background-color 0.5s ease;
 }
 
-/*Rules for Main Content*/
+/*================================================================================================*/
+/*Rules for Main Content Grid*/
+/*================================================================================================*/
 .main-content {
     display: grid;
     max-width: 100%;
-    height: 70vh;
-    grid-template-columns: 33% 34% 33%;
-    grid-template-rows: 40% 60%;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "Promotion Promotion Promotion"
                           "siteInfo1 siteInfo2 siteInfo3";
 }
-
 .Promotion {
     grid-area: Promotion;
-    border: 2px solid black;
-    background-color: azure;
 }
 .siteInfo1 {
     grid-area: siteInfo1;
-    background-color: rgb(231, 155, 155);
-    border: 2px solid black;
 }
 .siteInfo2 {
     grid-area: siteInfo2;
-    background-color: rgb(154, 154, 240);
-    border: 2px solid black;
 }
 .siteInfo3 {
     grid-area: siteInfo3;
-    background-color: rgb(163, 247, 163);
-    border: 2px solid black;
+}
+/*================================================================================================*/
+/*Rules for Main Content*/
+/*================================================================================================*/
+
+.Promotion {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url(../Images/Promotion_background.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
-/*Rules for Main Content*/
+.siteInfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.site_info_image{
+    height: 100%;
+    width: 100%;
+}
+
+.site_info_image1{
+    background-image: url(../Images/Nails_background.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.site_info_image2{
+    background-image: url(../Images/Tutorials.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.site_info_image3{
+    background-image: url(../Images/Trendy_background.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    font-size: 15px;
+    font-weight: 600;
+    background-color: hsl(0, 96%, 52%);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-style: none;
+    box-sizing: border-box;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+.btn_site_info{
+    margin-bottom: 2%;
+}
+
+
+.btn:hover,
+.btn:focus
+.btn:active {
+    transition: background-color 0.5s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+}
+
+
+/*Typography*/
+.main-content h1 {
+    font-size: 300%;
+    text-align: center;
+    padding: 2%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-content h2 {
+    font-size: 200%;
+    text-align: center;
+    padding: 2%;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-content p {
+    font-size: 125%;
+    font-weight: bold;
+    text-align: center;
+    padding: 2%;
+    margin: 0; 
+}
+
+.Promotion p{
+    font-size: 150%;
+    font-weight: 600;
+    text-align: center;
+    padding: 2%;
+    margin: 0;
+}
+
+
+/*================================================================================================*/
+/*Rules for Footer*/
+/*================================================================================================*/
 .footer {
     display: flex;
     flex-flow: row wrap;
@@ -143,10 +268,10 @@ li {
     border:2px solid black;
 }
 
-.footerLogo{
+.footerLogo {
     flex-grow: 1;
 }
 
-.ContactInfo {
+.ContactInfo{
     flex-grow: 1;
 }
