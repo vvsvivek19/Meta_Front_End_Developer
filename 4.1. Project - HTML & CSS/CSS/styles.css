@@ -48,7 +48,7 @@ table {
 /*Rules for body*/
 /*================================================================================================*/
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Fredoka, 'Courier New', Courier, monospace;
 }
 
 /*================================================================================================*/
@@ -58,7 +58,7 @@ header{
     background-color: rgba(206,160,0,255);
 }
 .logo{
-    width: 50%;
+    width: 10%;
     height: 10%;
     margin-left: auto;
     margin-right: auto;
@@ -78,7 +78,7 @@ li {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    background-color: #d6705e;
+    background-color: #6974d6;
 }
 .navigation li {
     display: inline-block;
@@ -86,17 +86,17 @@ li {
     margin: 0 25px;
     text-align: center;
     font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
 }
 .navigation a {
     text-decoration: none;
     color: black;
 }
-.navigation li:hover {
-    background-color: lightcyan;
-    color: black;
-    border-radius: 2px;
-    transition: background-color 0.5s ease;
+.navigation a:hover,
+.navigation a:focus,
+.navigation a:active {
+    color: #fff;
+    text-shadow: 1px 3px 13px rgba(158, 170, 38, 1);
+    transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
 /*================================================================================================*/
@@ -107,7 +107,7 @@ li {
     max-width: 100%;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2.5fr;
     grid-template-areas: "Promotion Promotion Promotion"
                           "siteInfo1 siteInfo2 siteInfo3";
 }
@@ -123,10 +123,10 @@ li {
 .siteInfo3 {
     grid-area: siteInfo3;
 }
+
 /*================================================================================================*/
 /*Rules for Main Content*/
 /*================================================================================================*/
-
 .Promotion {
     display: flex;
     justify-content: center;
@@ -137,6 +137,7 @@ li {
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    padding: 2%;
 }
 
 .siteInfo {
@@ -144,11 +145,21 @@ li {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    padding: 1%;
+    background-color: rgba(105, 116, 214, 0.5);
 }
 
 .site_info_image{
     height: 100%;
     width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.site_info_image:hover {
+    transform: scale(0.98);
+   
 }
 
 .site_info_image1{
@@ -176,12 +187,10 @@ li {
 }
 
 button {
-    font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
-
 .btn {
     font-size: 15px;
     font-weight: 600;
@@ -204,10 +213,8 @@ button {
 .btn_site_info{
     margin-bottom: 2%;
 }
-
-
 .btn:hover,
-.btn:focus
+.btn:focus,
 .btn:active {
     transition: background-color 0.5s ease;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -229,13 +236,14 @@ button {
     font-size: 200%;
     text-align: center;
     padding: 2%;
-    font-weight: bold;
+    font-weight: 500;
     margin: 0;
+    border-bottom: 1px solid gray;
 }
 
 .main-content p {
     font-size: 125%;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
     padding: 2%;
     margin: 0; 
@@ -243,7 +251,7 @@ button {
 
 .Promotion p{
     font-size: 150%;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     padding: 2%;
     margin: 0;
@@ -255,23 +263,28 @@ button {
 /*================================================================================================*/
 .footer {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background-color: rgba(206,160,0,255);
 }
 
 .footerItem {
     font-weight: bold;
-    padding: 25px;
-    text-align: center;
+    padding: 20px;
     color: black;
-    font-family: 'Courier New', Courier, monospace;
-    border:2px solid black;
+    border-top:1px solid grey;
+    max-width: 50%;
+
 }
 
 .footerLogo {
-    flex-grow: 1;
+    width: 25%;
+    height: 80%;
+    display: block;
+    padding: 5px;
 }
 
 .ContactInfo{
-    flex-grow: 1;
+    flex-grow: 2;
+    text-align: right;
 }
